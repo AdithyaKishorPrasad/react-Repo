@@ -45,22 +45,41 @@
 
 // export default App;
 
-import React from 'react';
-import ReactDom from 'react-dom';
+//////////////////////// useState
+// import React from 'react';
+// import ReactDom from 'react-dom';
 
-function TestState() {
-  const [colour, setColour] = React.useState('red');
-  return (
-    <>
-      <h1>Colour is : {colour}! </h1>
-      <div class="col">
-        <button type="button" onClick={() => setColour('blue')}>
-          Blue
-        </button>
-      </div>
-    </>
-  );
-}
+// function TestState() {
+//   const [colour, setColour] = React.useState('red');
+//   const [bike, setBike] = React.useState({
+//     year: 1999,
+//     name: 'KTM',
+//     color: 'orange',
+//     model: 'RC 400',
+//   });
 
-export default TestState;
-// ReactDom.render(<TestState />,document.getElementById('root'));
+//   const updateColor = () => {
+//     setBike((previousState) => {
+//       return { ...previousState, color: 'pink' };
+//     });
+//   };
+
+//   return (
+//     <>
+//       <h1>
+//         Bike name is {bike.name} and model {bike.model} and color is{' '}
+//         {bike.color}
+//       </h1>
+//       <h1>Colour is : {colour}! </h1>
+//       <div class="col">
+//         {/* <button type="button" onClick={() => setColour('blue')}> */}
+//         <button type="button" onClick={updateColor}>
+//           Blue
+//         </button>
+//       </div>
+//     </>
+//   );
+// }
+// export default TestState;
+
+
