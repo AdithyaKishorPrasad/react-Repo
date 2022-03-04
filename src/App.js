@@ -97,29 +97,68 @@
 
 // export default StateIncrement;
 
+// import React from 'react';
+// import { useState, useEffect } from 'react';
+
+// function CounterTitleUpdate() {
+//   useEffect(() => {
+//     if (count % 2 == 0) {
+//       document.body.style.backgroundColor = 'red';
+//     } else {
+//       document.body.style.backgroundColor = 'blue';
+//     }
+//   });
+
+//   const [count, Incrementstate] = useState(0);
+//   return (
+//     <>
+//       <p>Counter {count}</p>
+//       <div>
+//         <button type="button" onClick={() => Incrementstate(count + 1)}>
+//           Click{' '}
+//         </button>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default CounterTitleUpdate;
+
 import React from 'react';
-import { useState, useEffect } from 'react';
-
-function CounterTitleUpdate() {
-  useEffect(() => {
-    if (count % 2 == 0) {
-      document.body.style.backgroundColor = 'red';
-    } else {
-      document.body.style.backgroundColor = 'blue';
-    }
-  });
-
-  const [count, Incrementstate] = useState(0);
-  return (
-    <>
-      <p>Counter {count}</p>
-      <div>
-        <button type="button" onClick={() => Incrementstate(count + 1)}>
-          Click{' '}
-        </button>
-      </div>
-    </>
-  );
+class LikeButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+    this.LikeAction = this.LikeAction.bind(this);
+  }
+  componentDidUpdate() {
+    // this.likeAction();
+    document.body.style.backgroundColor = 'orange';
+    this.setState({ count: this.state.count + 1 });
+  }
+  LikeAction() {
+    document.body.style.color = 'green';
+  }
+  render() {
+    return (
+      <>
+        <div className="like" onClick={() => this.LikeAction()}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 0 24 24"
+            width="24px"
+            fill="#FF0000"
+          >
+            <path d="M0 0h24v24H0V0zm0 0h24v24H0V0z" fill="none" />
+            <path d="M9 21h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.58 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2zM9 9l4.34-4.34L12 10h9v2l-3 7H9V9zM1 9h4v12H1z" />
+          </svg>
+        </div>
+        <p>Like Count: {this.state.count}</p>
+      </>
+    );
+  }
 }
-
-export default CounterTitleUpdate;
+export default LikeButton;
