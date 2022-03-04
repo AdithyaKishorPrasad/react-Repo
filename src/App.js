@@ -97,3 +97,29 @@
 
 // export default StateIncrement;
 
+import React from 'react';
+import { useState, useEffect } from 'react';
+
+function CounterTitleUpdate() {
+  useEffect(() => {
+    if (count % 2 == 0) {
+      document.body.style.backgroundColor = 'red';
+    } else {
+      document.body.style.backgroundColor = 'blue';
+    }
+  });
+
+  const [count, Incrementstate] = useState(0);
+  return (
+    <>
+      <p>Counter {count}</p>
+      <div>
+        <button type="button" onClick={() => Incrementstate(count + 1)}>
+          Click{' '}
+        </button>
+      </div>
+    </>
+  );
+}
+
+export default CounterTitleUpdate;
