@@ -72,16 +72,20 @@
 //     super(props);
 //     this.state = {
 //       count: 0,
+//       name: '',
 //     };
 //   }
 //   render() {
 //     return (
 //       <>
+//         <p>Name is {this.state.name}</p>
 //         <p>Button Pressed {this.state.count} times</p>
 //         <div>
 //           <button
 //             type="button"
-//             onClick={() => this.setState({ count: this.state.count + 1 })}
+//             onClick={() =>
+//               this.setState({ count: this.state.count + 1, name: 'Time' })
+//             }
 //           >
 //             Click Me!
 //           </button>
@@ -92,5 +96,4 @@
 // }
 
 // export default StateIncrement;
-
 
