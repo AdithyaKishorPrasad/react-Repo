@@ -45,22 +45,52 @@
 
 // export default App;
 
-import React from 'react';
-import ReactDom from 'react-dom';
+// import React from 'react';
+// import ReactDom from 'react-dom';
 
-function TestState() {
-  const [colour, setColour] = React.useState('red');
-  return (
-    <>
-      <h1>Colour is : {colour}! </h1>
-      <div class="col">
-        <button type="button" onClick={() => setColour('blue')}>
-          Blue
-        </button>
-      </div>
-    </>
-  );
-}
+// function TestState() {
+//   const [colour, setColour] = React.useState('red');
+//   return (
+//     <>
+//       <h1>Colour is : {colour}! </h1>
+//       <div class="col">
+//         <button type="button" onClick={() => setColour('blue')}>
+//           Blue
+//         </button>
+//       </div>
+//     </>
+//   );
+// }
 
-export default TestState;
+// export default TestState;
 // ReactDom.render(<TestState />,document.getElementById('root'));
+
+// import React from 'react';
+
+// class StateIncrement extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       count: 0,
+//     };
+//   }
+//   render() {
+//     return (
+//       <>
+//         <p>Button Pressed {this.state.count} times</p>
+//         <div>
+//           <button
+//             type="button"
+//             onClick={() => this.setState({ count: this.state.count + 1 })}
+//           >
+//             Click Me!
+//           </button>
+//         </div>
+//       </>
+//     );
+//   }
+// }
+
+// export default StateIncrement;
+
+
